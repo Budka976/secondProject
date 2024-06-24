@@ -8,30 +8,29 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>description</th>
+                        <th>status</th>
+                        <th>created at</th>
+                        <th>updated at</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
+                    @foreach($posts as $item)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        
+                        <td>{{ $item->id }}</td>
+                            <td>{{ $item->title }}</td>
+                            <td>{{ $item->description }}</td>
+                            <td>{{ $item->status }}</td>
+                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $item->updated_at }}</td>
+                            <td>{{ $item->action }}</td>
+                        
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <div class="card-footer text-body-secondary">

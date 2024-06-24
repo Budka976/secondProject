@@ -1,4 +1,4 @@
 @extends('app')
 @section('c')
-    tes
+    test
 @endsection
