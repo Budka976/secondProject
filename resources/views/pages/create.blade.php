@@ -32,7 +32,8 @@
 
                             <div class="mb-3">
                                 <label for="">Is public or Private</label>
-                                <input type="checkbox" name="status">
+                                <input type="checkbox" name="status" {{old('status') ?  'checked' : ''}}>
+
                             </div>
 
                             <div class="mb-3">

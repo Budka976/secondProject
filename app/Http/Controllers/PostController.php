@@ -36,9 +36,9 @@ class PostController extends Controller
             'status' => $request->status == true ? 1 : 0
         ]);
 
-        return redirect('/posts');
+        return redirect('/posts')->with('message',' Post Created Successfully');
 
-        
+
     }
     
 
