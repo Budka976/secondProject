@@ -29,7 +29,16 @@ class PostController extends Controller
             'description' => 'required|string',
             'status' => 'nullable|sometimes'
         ]);
-        dd($validatedData);
+        // dd($validatedData);
+        Post::query()->create([
+            'title' => $validatedData['title'],
+            'description' => $validatedData['description'],
+            'status' => $request->status == true ? 1 : 0
+        ]);
+
+        return redirect('/posts');
+
+        
     }
     
 

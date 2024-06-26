@@ -2,6 +2,7 @@
 
 
 @section('content')
+<br>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -19,12 +20,14 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="">title</label>
-                                <input type="text" name="title" class="form-control">
+                                <input type="text" name="title" class="form-control" value="{{old('title')}}">
+                                @error('title') <small class="text-danger">{{$message}}</small>@enderror
                             </div>
 
                             <div class="mb-3">
                                 <label for="">description</label>
-                                <textarea class="form-control" name="description"></textarea>
+                                <textarea class="form-control" name="description" value="{{old('description')}}"></textarea>
+                                @error('description') <small class="text-danger">{{$message}}</small> @enderror
                             </div>
 
                             <div class="mb-3">
